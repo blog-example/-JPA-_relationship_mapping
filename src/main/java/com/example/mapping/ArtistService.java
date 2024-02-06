@@ -23,19 +23,19 @@ public class ArtistService {
     Artist newJeans = new Artist("New Jeans");
     entityManager.persist(newJeans);
 
-    Member minji = new Member("Minji", "vocal", newJeans.getArtistId());
+    Member minji = new Member("Minji", "vocal", newJeans);
     entityManager.persist(minji);
 
-    Member hanni = new Member("Hanni", "vocal", newJeans.getArtistId());
+    Member hanni = new Member("Hanni", "vocal", newJeans);
     entityManager.persist(hanni);
 
-    Member danielle = new Member("Danielle", "vocal", newJeans.getArtistId());
+    Member danielle = new Member("Danielle", "vocal", newJeans);
     entityManager.persist(danielle);
 
-    Member haerin = new Member("Haerin", "vocal", newJeans.getArtistId());
+    Member haerin = new Member("Haerin", "vocal", newJeans);
     entityManager.persist(haerin);
 
-    Member hyein = new Member("Hyein", "vocal", newJeans.getArtistId());
+    Member hyein = new Member("Hyein", "vocal", newJeans);
     entityManager.persist(hyein);
   }
 }
