@@ -20,22 +20,22 @@ public class ArtistService {
 
   @Transactional
   public void createArtist() {
-    Artist artist = new Artist("New Jeans");
-    entityManager.persist(artist);
+    Artist newJeans = new Artist("New Jeans");
+    entityManager.persist(newJeans);
 
-    Member minji = new Member("Minji", "vocal", artist.getArtistId());
+    Member minji = new Member("Minji", "vocal", newJeans.getArtistId());
     entityManager.persist(minji);
 
-    Member hanni = new Member("Hanni", "vocal", artist.getArtistId());
+    Member hanni = new Member("Hanni", "vocal", newJeans.getArtistId());
     entityManager.persist(hanni);
 
-    Member danielle = new Member("Danielle", "vocal", artist.getArtistId());
+    Member danielle = new Member("Danielle", "vocal", newJeans.getArtistId());
     entityManager.persist(danielle);
 
-    Member haerin = new Member("Haerin", "vocal", artist.getArtistId());
+    Member haerin = new Member("Haerin", "vocal", newJeans.getArtistId());
     entityManager.persist(haerin);
 
-    Member hyein = new Member("Hyein", "vocal", artist.getArtistId());
+    Member hyein = new Member("Hyein", "vocal", newJeans.getArtistId());
     entityManager.persist(hyein);
   }
 }
