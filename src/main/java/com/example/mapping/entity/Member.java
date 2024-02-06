@@ -17,9 +17,6 @@ public class Member {
   @Column(name = "part")
   private String part;
 
-//  @Column(name = "artist_id")
-//  private long artistId;
-
   @ManyToOne
   @JoinColumn(name = "artist_id")
   private Artist artist;
