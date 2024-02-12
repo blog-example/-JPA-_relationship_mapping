@@ -3,6 +3,9 @@ package com.example.mapping.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Getter
 @Entity
@@ -17,7 +20,15 @@ public class Artist {
   @Column(name = "name")
   private String name;
 
+  @OneToMany
+  @JoinColumn(name = "artist_id", updatable = false)
+  List<Member> members = new ArrayList<>();
+
   public Artist(String name) {
     this.name = name;
+  }
+
+  public void addMember(Member member) {
+    this.members.add(member);
   }
 }

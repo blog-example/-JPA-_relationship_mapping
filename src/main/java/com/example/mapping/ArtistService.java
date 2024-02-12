@@ -25,17 +25,24 @@ public class ArtistService {
 
     Member minji = new Member("Minji", "vocal", newJeans.getArtistId());
     entityManager.persist(minji);
+    newJeans.addMember(minji);
 
     Member hanni = new Member("Hanni", "vocal", newJeans.getArtistId());
     entityManager.persist(hanni);
+    newJeans.addMember(hanni);
 
     Member danielle = new Member("Danielle", "vocal", newJeans.getArtistId());
     entityManager.persist(danielle);
+    newJeans.addMember(danielle);
 
     Member haerin = new Member("Haerin", "vocal", newJeans.getArtistId());
     entityManager.persist(haerin);
+    newJeans.addMember(haerin);
 
     Member hyein = new Member("Hyein", "vocal", newJeans.getArtistId());
     entityManager.persist(hyein);
+    newJeans.addMember(hyein);
+
+
   }
 }
