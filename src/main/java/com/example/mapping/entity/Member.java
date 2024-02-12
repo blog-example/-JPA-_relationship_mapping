@@ -17,12 +17,13 @@ public class Member {
   @Column(name = "part")
   private String part;
 
-  @Column(name = "artist_id")
-  private long artistId;
+  @ManyToOne
+  @JoinColumn(name = "artist_id")
+  private Artist artist;
 
-  public Member(String name, String member, long artistId) {
+  public Member(String name, String member, Artist artist) {
     this.name = name;
     this.part = member;
-    this.artistId = artistId;
+    this.artist = artist;
   }
 }
